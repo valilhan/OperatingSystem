@@ -1,14 +1,15 @@
-  
-#include <stdio.h>
-#include <float.h>
-#include <limits.h>
 
-int a = INT_MAX;
-double b = DBL_MAX;
-float c = FLT_MAX;
+#include <stdio.h>
+#include <string.h>
+
+char s[10001];
+char ans[10001];
+int j = 0;
 
 int main(){
-	printf("INT:%d\n", a);
-	printf("FLOAT:%f\n", c);
-	printf("DOUBLE:%f\n", b);
+	scanf("%s", s);
+	for(int i = strlen(s) - 1; i >= 0; i--){
+		ans[j++] = s[i];
+	}
+	printf("%s", ans);
 }
